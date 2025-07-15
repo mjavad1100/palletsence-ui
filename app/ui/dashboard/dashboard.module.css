@@ -1,0 +1,46 @@
+
+/* مدیا کوئری‌ها اختصاصی داشبورد */
+.cardsContainer {
+  padding: 24px;
+  font-size: 1rem;
+}
+
+.cards {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: stretch;
+}
+
+/* حالت دسکتاپ */
+@media (min-width: 1025px) {
+  .cardsContainer {
+    padding: 2px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+/* حالت تبلت */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* حالت موبایل */
+@media (max-width: 767px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cardsContainer {
+    padding: 10px;
+  }
+}

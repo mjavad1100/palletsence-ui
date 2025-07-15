@@ -1,0 +1,144 @@
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  /* padding: 16px; */
+}
+
+.card {
+  position: relative;
+  background: var(--bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  background: var(--bgHover);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.cardIcon[data-change="increase"] {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.cardIcon[data-change="decrease"] {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.cardTitle {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.cardDescription {
+  color: var(--textSoft);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.cardValueContainer {
+  margin: 16px 0;
+}
+
+.cardValue {
+  color: var(--text);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.cardTrend {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  margin-top: 8px;
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--primary);
+}
+
+.cardTrend.increase {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+
+.cardTrend.decrease {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.trendArrow {
+  margin-right: 6px;
+  font-weight: bold;
+}
+
+.cardFooter {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.cardProgressLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--textSoft);
+}
+
+.pulse {
+  animation: pulseAnimation 1.5s infinite;
+}
+
+@keyframes pulseAnimation {
+  0% { opacity: 0.9; }
+  50% { opacity: 0.7; }
+  100% { opacity: 0.9; }
+}
+
+@media (max-width: 768px) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .cardValue {
+    font-size: 2.2rem;
+  }
+}

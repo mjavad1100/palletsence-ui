@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Theme */
+  --bg: #f8f9fa;
+  /* near-white background */
+  --bgSoft: #ffffff;
+  /* pure white surfaces */
+  --bgHover: #f1f3f5;
+  /* light gray hover */
+  --text: #1c1c1e;
+  /* dark gray text */
+  --textSoft: #888888;
+  /* medium gray text */
+  --border: #d1d5db;
+  /* subtle gray border */
+  --primary: #4f46e5;
+  /* Apple blue accent (trustworthy) */
+  --primaryHover: #6366f1;
+  /* darker blue on hover */
+}
+
+.dark {
+  /* Dark Theme */
+  --bg: #1c1c1e;
+  /* very dark gray background */
+  --bgSoft: #2c2c2e;
+  /* slightly lighter dark surface */
+  --bgHover: #3a3a3c;
+  /* dark gray hover */
+  --text: #ffffff;
+  /* white text */
+  --textSoft: #a9a9a9;
+  /* light gray secondary text */
+  --border: #38383a;
+  /* dark gray border */
+  --primary: #4f46e5;
+  /* Apple blue accent (trustworthy) */
+  --primaryHover: #6366f1;
+  /* darker blue on hover */
+}
+
+/* Smooth transitions */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* navbar.module.css */
+.themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: inherit;
+}
+
+/* :root {
+    --bg: #151c2c;
+    --bgSoft: #182237;
+    --bgHover: #2e374a;
+    --text: white;
+    --textSoft: #b7bac1;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

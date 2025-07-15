@@ -1,0 +1,43 @@
+/* layout.module.css */
+
+/* Container اصلی کل صفحه */
+.container {
+  display: flex;
+  padding: 15px;
+  gap: 15px;
+  min-height: 100vh;
+  background-color: var(--bg);
+  transition: background-color 0.3s ease;
+}
+
+/* ناحیه اصلی صفحه (main content) */
+.main {
+  flex: 5;
+  background-color: var(--bgSoft);
+  border-radius: 16px;
+  padding: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05); /* سایه مینیمال */
+  border: 1px solid var(--border);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+/* مدیا کوئری‌ها برای واکنش‌گرا کردن طرح */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .main {
+    padding: 16px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 12px;
+    border-radius: 10px;
+  }
+}

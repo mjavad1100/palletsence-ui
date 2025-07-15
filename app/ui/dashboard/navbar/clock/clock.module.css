@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.clock {
+  font-size: 18px;
+  font-weight: 450;
+  color: var(--text); /* رنگ متن اصلی */
+}
+
+.date {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--textSoft); /* رنگ متن نرم‌تر */
+}

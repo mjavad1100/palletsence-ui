@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  margin: 16px;
+  margin-bottom: 0;
+  border-radius: 16px;
+  background-color: var(--bgSoft);
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04); /* subtle elevation */
+  backdrop-filter: blur(10px); /* for macOS feel */
+  border: 1px solid var(--border);
+  transition: background-color 0.2s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.icons {
+  display: flex;
+  gap: 18px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.icons svg {
+  cursor: pointer;
+  color: var(--textSoft);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.icons svg:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
