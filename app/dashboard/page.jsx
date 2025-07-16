@@ -50,7 +50,7 @@ const DashboardPage = () => {
     <div className="space-y-5">
       {/* KPI Cards */}
       <section className={styles.cardsContainer}>
-        <h2 className="text-xl font-semibold mb-7 mt-4">Pellet Process KPIs</h2>
+        <h2 className="text-xl font-semibold mb-1 mt-1">Pellet Process KPIs</h2>
         <StatsCards />
         <h2 className="text-xl font-semibold mb-4 mt-10">Chart Process</h2>
 

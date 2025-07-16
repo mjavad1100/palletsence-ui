@@ -50,13 +50,14 @@
 /* Toggle Button */
 .toggleButton {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  left: 0px;
   z-index: 1200;
+  opacity: 0.8;
   background-color: var(--bgSoft);
   border: 1px solid var(--border);
   padding: 10px;
-  border-radius: 50%;
+  border-bottom-right-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;

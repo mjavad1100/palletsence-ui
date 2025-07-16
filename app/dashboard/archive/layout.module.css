@@ -3,7 +3,7 @@
 /* Container اصلی کل صفحه */
 .container {
   display: flex;
-  padding: 15px;
+  padding: 16px;
   gap: 15px;
   min-height: 100vh;
   background-color: var(--bg);
@@ -39,5 +39,8 @@
   .main {
     padding: 12px;
     border-radius: 10px;
+  }
+  .container {
+    gap: 0;
   }
 }
