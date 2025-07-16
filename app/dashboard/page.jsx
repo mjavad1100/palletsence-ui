@@ -50,9 +50,12 @@ const DashboardPage = () => {
     <div className="space-y-5">
       {/* KPI Cards */}
       <section className={styles.cardsContainer}>
-        <h2 className="text-xl font-semibold mb-4">Pellet Process KPIs</h2>
+        <h2 className="text-xl font-semibold mb-7 mt-4">Pellet Process KPIs</h2>
         <StatsCards />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
+                          <h2 className="text-xl font-semibold mb-4 mt-10">Chart Process</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+
           {/* {cards.map(c => <Card key={c.title} item={c} />)} */}
           <div className="lg:col-span-2">
             <ComposedChartCard
