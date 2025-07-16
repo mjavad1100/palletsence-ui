@@ -18,7 +18,7 @@
   transform: translateY(-5px);
 }
 
-.container::before {
+/* .container::before {
   content: '';
   position: absolute;
   top: 0;
@@ -28,7 +28,7 @@
   background: linear-gradient(180deg, var(--primary), var(--primaryHover));
   border-radius: 1rem 0 0 1rem;
   transition: height 0.3s ease;
-}
+} */
 
 .container:hover::before {
   height: 120%;

@@ -98,7 +98,7 @@ const Card = ({ item }) => {
   const renderIndustrialChart = () => {
     const commonProps = {
       data: chartData,
-      margin: { top: 10, right: 10, left: 10, bottom: 10 }
+      margin: { top: 10, right: 20, left: 20, bottom: 10 }
     };
 
     const tooltipStyle = {
@@ -123,7 +123,7 @@ const Card = ({ item }) => {
               yAxisId="left"
               dataKey="output" 
               fill={INDUSTRIAL_COLORS[0]} 
-              barSize={20}
+              barSize={4}
               radius={[4, 4, 0, 0]}
             />
             <Line 

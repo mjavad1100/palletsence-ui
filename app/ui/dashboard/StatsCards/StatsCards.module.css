@@ -2,10 +2,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
-  /* padding: 16px; */
+  padding: 16px;
 }
 
-.card::before {
+/* .card::before {
    content: '';
   position: absolute;
   top: 0;
@@ -15,10 +15,10 @@
   background: linear-gradient(180deg, var(--primary), var(--primaryHover));
   border-radius: 1rem 0 0 1rem;
   transition: height 0.3s ease;
-}
+} */
 
 .card {
-  
+
   position: relative;
   background: var(--bg);
   border-radius: 16px;
@@ -81,12 +81,12 @@
 }
 
 .cardValueContainer {
-  margin: 16px 0;
+  margin: 10px 0;
 }
 
 .cardValue {
   color: var(--text);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 0;
   line-height: 1;

@@ -67,13 +67,13 @@ const DashboardPage = () => {
             />
 
           </div>
-          <Card item={{
+          {/* <Card item={{
             title: "Production Output",
             value: 1250000,
             unit: "units",
             chartType: "production",
             status: "normal"
-          }} />
+          }} /> */}
         </div>
       </section>
 
