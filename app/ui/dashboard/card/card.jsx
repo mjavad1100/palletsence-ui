@@ -46,7 +46,7 @@ const generateIndustrialData = (type, target) => {
   }
 };
 
-const card = ({ item }) => {
+const Card = ({ item }) => {
   const targetValue = useRef(item.value || 0);
   const [displayValue, setDisplayValue] = useState(0);
   const [chartData, setChartData] = useState([]);
@@ -223,4 +223,4 @@ const card = ({ item }) => {
   );
 };
 
-export default card;
+export default Card;
