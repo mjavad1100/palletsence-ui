@@ -51,21 +51,24 @@ const DashboardPage = () => {
       {/* KPI Cards */}
       <section className={styles.cardsContainer}>
         <h2 className="text-xl font-semibold mb-4">Pellet Process KPIs</h2>
-                <StatsCards/>
+        <StatsCards />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
-          {cards.map(c => <Card key={c.title} item={c} />)}
-        
-              <div className="lg:col-span-2">
-          <ComposedChartCard
-            title="Production Overview"
-            data={exampleData}
-            barKey="bar"
-            lineKey="line"
-            areaKey="area"
-          />
-          
-        </div>
+          {/* {cards.map(c => <Card key={c.title} item={c} />)} */}
+          <div className="lg:col-span-2">
+            <ComposedChartCard
+              title="Production Overview"
+              data={exampleData}
+              barKey="bar"
+              lineKey="line"
+              areaKey="area"
+            />
 
+          </div>
+          <Card item={{
+            title: "Sales Performance",
+            content: "100",
+            chartType: "composed" // or "stacked", "timeline", etc.
+          }} />
         </div>
       </section>
 
@@ -78,14 +81,13 @@ const DashboardPage = () => {
       </section>
 
       {/* Actions */}
-      <section className="px-2 sm:px-4 py-4">
+      {/* <section className="px-2 sm:px-4 py-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Action Cards */}
           <ActionCard name="Speed" />
           <ActionCard name="Feed" />
           <ActionCard name="Valve 2" />
         </div>
-      </section>
+      </section> */}
     </div >
   );
 };

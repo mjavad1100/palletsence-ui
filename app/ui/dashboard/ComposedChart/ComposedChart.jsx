@@ -18,7 +18,7 @@ import {
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
-      <div className="bg-[var(--bg)] border border-[var(--border)] rounded-lg p-4 m-2 shadow-lg">
+      <div className="bg-[var(--bg)] border border-[var(--border)] rounded-lg p-4 shadow-lg">
         <p className="font-semibold text-[var(--text)]">{label}</p>
         {payload.map((entry, index) => (
           <p 
@@ -57,12 +57,9 @@ const renderLegend = (props) => {
 };
 
 const ComposedChartCard = ({ title, data, barKey, lineKey, areaKey }) => {
-  // Chart color scheme
   const barColor = "var(--primary)";
   const lineColor = "#ff6b35";
-  const areaColor = "rgba(79, 70, 229, 0.3)";
   
-  // Calculate max value for reference line
   const maxValue = Math.max(...data.map(item => {
     const values = [];
     if (barKey) values.push(item[barKey]);
@@ -72,7 +69,16 @@ const ComposedChartCard = ({ title, data, barKey, lineKey, areaKey }) => {
   }));
 
   return (
-    <div className="bg-[var(--bg)] border border-[var(--border)] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
+    <div className="bg-[var(--bg)] border border-[var(--border)] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl relative overflow-hidden group">
+      {/* Gradient border element */}
+      <div 
+        className="absolute top-0 left-0 w-1.5 h-full transition-all duration-300 group-hover:h-4/5"
+        style={{
+          background: 'linear-gradient(180deg, var(--primary), var(--primaryHover))',
+          borderRadius: '1rem 0 0 1rem'
+        }}
+      />
+
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6">
         <h2 className="text-xl font-bold text-[var(--text)]">{title}</h2>
         <div className="flex space-x-2 mt-2 sm:mt-0">
@@ -177,7 +183,7 @@ const ComposedChartCard = ({ title, data, barKey, lineKey, areaKey }) => {
         <div className="px-3 py-1 bg-[var(--bg)] text-[var(--textSoft)] text-sm rounded-full border border-[var(--border)]">
           Real-time
         </div>
-        <div className="px-3 py-1 bg-[var(--primary)] text-white text-sm rounded-full">
+        <div className="px-3 py-1 bg-[var(--primary)] text-white text-sm rounded-full hover:bg-[var(--primaryHover)] transition-colors">
           Export Data
         </div>
       </div>
