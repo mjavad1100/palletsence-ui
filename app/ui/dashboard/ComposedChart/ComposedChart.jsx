@@ -150,7 +150,7 @@ const ComposedChartCard = ({ title, data, barKey, lineKey, areaKey }) => {
           {barKey && (
             <Bar 
               dataKey={barKey} 
-              barSize={24} 
+              barSize={8} 
               fill={barColor} 
               radius={[4, 4, 0, 0]}
               name={barKey}
@@ -161,7 +161,7 @@ const ComposedChartCard = ({ title, data, barKey, lineKey, areaKey }) => {
               type="monotone"
               dataKey={lineKey}
               stroke={lineColor}
-              strokeWidth={3}
+              strokeWidth={2}
               dot={{ stroke: lineColor, strokeWidth: 2, r: 4 }}
               activeDot={{ r: 6, stroke: lineColor }}
               name={lineKey}

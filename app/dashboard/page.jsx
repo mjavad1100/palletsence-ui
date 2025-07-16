@@ -52,7 +52,7 @@ const DashboardPage = () => {
       <section className={styles.cardsContainer}>
         <h2 className="text-xl font-semibold mb-7 mt-4">Pellet Process KPIs</h2>
         <StatsCards />
-                          <h2 className="text-xl font-semibold mb-4 mt-10">Chart Process</h2>
+        <h2 className="text-xl font-semibold mb-4 mt-10">Chart Process</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
 
@@ -68,9 +68,11 @@ const DashboardPage = () => {
 
           </div>
           <Card item={{
-            title: "Sales Performance",
-            content: "100",
-            chartType: "composed" // or "stacked", "timeline", etc.
+            title: "Production Output",
+            value: 1250000,
+            unit: "units",
+            chartType: "production",
+            status: "normal"
           }} />
         </div>
       </section>
